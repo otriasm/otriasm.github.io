@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Trías | Senior Product Manager</title>
+    <!-- Google Fonts: Usaremos Inter para emular la tipografía limpia y corporativa -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #121212;
+            --text-light: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --bg-light: #ffffff;
+            --bg-gray: #f7f7f7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            padding: 0 4rem;
+            /* Imagen de fondo representativa de rascacielos corporativos en blanco y negro */
+            background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Overlay oscuro para legibilidad del texto */
+            background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            color: var(--text-light);
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 550px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- VALUE SECTION --- */
+        .value-section {
+            padding: 6rem 4rem;
+            background-color: var(--bg-light);
+        }
+
+        .value-section h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 4rem;
+            letter-spacing: -0.5px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+        }
+
+        .feature-card svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 1.2rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 1rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* --- MEDIUM INSIGHTS SECTION --- */
+        .insights-section {
+            padding: 6rem 4rem;
+            background-color: var(--bg-gray);
+        }
+
+        .insights-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+        }
+
+        .insights-header h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+        }
+
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .article-card {
+            background-color: var(--bg-light);
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            background-color: #e5e5e5;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-date {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .article-link {
+            margin-top: auto;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* --- RESPONSIVE DESIGN --- */
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+            .insights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 1.5rem 2rem; }
+            .nav-links { display: none; /* Simplificación para móvil */ }
+            .hero { padding: 0 2rem; }
+            .hero h1 { font-size: 2.5rem; }
+            .value-section, .insights-section { padding: 4rem 2rem; }
+            .features-grid, .insights-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#" class="logo">Oscar Trías.</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#value">Services</a>
+            <a href="#insights">Insights</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Resolvemos flujos financieros complejos</h1>
+            <p>Comenzando en UX y liderando producto, evalúo cada desafío desde cuatro ángulos: negocio, datos, tecnología y experiencia. Construimos historias centradas en el usuario con precisión y escala.</p>
+            <a href="#contact" class="btn-primary">Agendar Consulta</a>
+        </div>
+    </section>
+
+    <!-- Propuesta de Valor (Grid de 4 columnas) -->
+    <section id="value" class="value-section">
+        <h2>Nuestro valor, tu ventaja</h2>
+        
+        <div class="features-grid">
+            <!-- Item 1 -->
+            <div class="feature-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                    <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                    <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                </svg>
+                <h3>Visión enfocada a negocio</h3>
+                <p>Alineamos cada solución tecnológica con la estrategia global. Logramos un aumento del +15% en la cartera de crédito digital convirtiendo cuellos de botella en flujos de 24 horas.</p>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="feature-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M2 12h4l3-9 5 18 3-9h5"></path>
+                </svg>
+                <h3>Arquitectura interconectada</h3>
+                <p>Diseñamos el Daily Banking como una sola narrativa: la apertura de cuenta informa el comportamiento de ahorro, y este alimenta la originación de crédito.</p>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="feature-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <h3>Experiencia multipaís</h3>
+                <p>Hemos adaptado productos y escalado operaciones para más de 8 millones de usuarios en 8 países, sirviendo de puente entre ingeniería global y necesidades locales.</p>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="feature-card">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <h3>Velocidad y Gobernanza</h3>
+                <p>Priorizamos lanzamientos rápidos con información clave (RICE, A/B Testing) y optimizamos la toma de decisiones utilizando herramientas de IA (Claude/ChatGPT) para análisis masivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights / Medium Articles Section -->
+    <section id="insights" class="insights-section">
+        <div class="insights-header">
+            <h2>Casos de Estudio &amp; Insights</h2>
+        </div>
+
+        <div class="insights-grid">
+            
+            <!-- Card 1 (Placeholder para Medium) -->
+            <a href="https://medium.com/@oscar_trias" target="_blank" rel="noopener noreferrer" class="article-card">
+                <!-- Cambia el src por la URL de tu imagen de portada en Medium -->
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Data Analytics" class="article-img">
+                <div class="article-content">
+                    <span class="article-date">Publicado en Medium</span>
+                    <h3 class="article-title">[Pega aquí el título de tu artículo sobre producto]</h3>
+                    <p class="article-excerpt">Una breve descripción o los primeros párrafos de tu artículo de Medium. Explica cómo la conjunción de datos y UX permite construir mejores productos.</p>
+                    <span class="article-link">Leer en Medium 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 2 (Placeholder para Medium) -->
+            <a href="https://medium.com/@oscar_trias" target="_blank" rel="noopener noreferrer" class="article-card">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Team Strategy" class="article-img">
+                <div class="article-content">
+                    <span class="article-date">Publicado en Medium</span>
+                    <h3 class="article-title">[Pega aquí el título de tu segundo artículo]</h3>
+                    <p class="article-excerpt">Aquí puedes resumir tus aprendizajes sobre la colaboración cruzada entre Growth, CX y Marketing, y cómo esto ayuda a reducir la tasa de abandono en el Onboarding.</p>
+                    <span class="article-link">Leer en Medium 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Card 3 (Placeholder para Medium) -->
+            <a href="https://medium.com/@oscar_trias" target="_blank" rel="noopener noreferrer" class="article-card">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop" alt="Tech Architecture" class="article-img">
+                <div class="article-content">
+                    <span class="article-date">Publicado en Medium</span>
+                    <h3 class="article-title">[Pega aquí el título de tu tercer artículo]</h3>
+                    <p class="article-excerpt">Agrega un extracto sobre cómo lanzar ecosistemas complejos. Habla sobre la gobernanza de datos y la implementación de IA para acelerar desarrollos digitales.</p>
+                    <span class="article-link">Leer en Medium 
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>
