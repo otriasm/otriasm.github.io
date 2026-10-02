@@ -1,0 +1,87 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "EN.dc.html": {
+      "expand": "fill",
+      "h": 5200,
+      "title": "EN · Desktop 1440 (editable)",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 5200,
+      "title": "ES · Escritorio 1440 (editable)",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Mobile.dc.html": {
+      "h": 8000,
+      "title": "ES · Móvil 390 (vista en vivo)",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    },
+    "MobileEN.dc.html": {
+      "h": 8000,
+      "title": "EN · Mobile 390 (live view)",
+      "w": 390,
+      "x": 3510,
+      "y": 0
+    },
+    "Violeta.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "title": "Versión B · Violeta · Escritorio 1440",
+      "w": 1440,
+      "x": 0,
+      "y": 8500
+    },
+    "VioletaMobile.dc.html": {
+      "h": 8000,
+      "title": "Versión B · Violeta · Móvil 390 (vista en vivo)",
+      "w": 390,
+      "x": 1520,
+      "y": 8500
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-01T20:30:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "view": "canvas"
+  },
+  "notes": {
+    "rowA": {
+      "kind": "title1",
+      "maxW": 3900,
+      "text": "Versión A · Monocromo",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    },
+    "rowB": {
+      "kind": "title1",
+      "maxW": 1910,
+      "text": "Versión B · Violeta y fucsia",
+      "w": 240,
+      "x": 0,
+      "y": 8200
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Mobile.dc.html",
+    "EN.dc.html",
+    "MobileEN.dc.html",
+    "Violeta.dc.html",
+    "VioletaMobile.dc.html"
+  ],
+  "pages": [],
+  "title": "Oscar Trías — Sitio personal"
+}
