@@ -1,4 +1,4 @@
-# otriasm.github.io
+# oscar.trias.github.io
 
 Sitio personal de Oscar Trías — Senior Product Manager · Product Builder.
 
