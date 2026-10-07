@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lo que aprendí construyendo La Botanería | Oscar Trías</title>
+<meta name="description" content="Apliqué a mi propio negocio el mismo proceso de producto que uso en banca: investigación, personas, discovery, PRD y go-to-market. Esto es lo que aprendí.">
+<link rel="canonical" href="https://otriasm.github.io/blog/la-botaneria/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lo que aprendí construyendo La Botanería">
+<meta property="og:description" content="El mismo proceso de producto que uso en banca, aplicado a un candy wall para fiestas.">
+<meta property="og:url" content="https://otriasm.github.io/blog/la-botaneria/">
+<meta property="article:published_time" content="2026-10-07">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","headline":"Lo que aprendí construyendo La Botanería","datePublished":"2026-10-07","inLanguage":"es","author":{"@type":"Person","name":"Oscar Trías","url":"https://otriasm.github.io/"},"mainEntityOfPage":"https://otriasm.github.io/blog/la-botaneria/"}
+</script>
+<style>
+:root{--ink:#1c1733;--muted:#5b5670;--night:#140f2e;--violet:#694ed6;--violet-d:#4b36a8;--fuchsia:#c137a2;--fuchsia-d:#a12a86;--soft:#f5f3fc;--line:#e4e0f2}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a:focus-visible{outline:3px solid var(--fuchsia);outline-offset:3px}
+.pad{padding-left:clamp(20px,5vw,64px);padding-right:clamp(20px,5vw,64px)}
+header{background:var(--night);color:#fff;padding-top:28px;padding-bottom:clamp(56px,8vw,96px)}
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:22px;font-weight:800;letter-spacing:-.5px;text-decoration:none}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--fuchsia);box-shadow:8px 0 0 var(--violet);margin-right:8px}
+.navlinks{display:flex;flex-wrap:wrap;gap:4px 28px}
+.navlinks a{color:#e4e0f2;font-size:15px;font-weight:500;text-decoration:none;padding:12px 0}
+.hero{max-width:820px;margin-top:clamp(48px,7vw,88px)}
+.eyebrow{margin:0 0 16px;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e9a6da}
+h1{margin:0;font-size:clamp(36px,5.4vw,64px);font-weight:800;letter-spacing:-2px;line-height:1.05}
+h1 em{font-style:normal;color:#e9a6da}
+.lede{margin:24px 0 0;font-size:clamp(18px,2vw,21px);line-height:1.6;color:#c9c3e3;max-width:680px}
+.meta{margin-top:28px;font-size:14px;color:#a39cc4}
+main{max-width:760px;margin:0 auto;padding-top:clamp(48px,7vw,80px);padding-bottom:clamp(48px,7vw,80px)}
+main h2{margin:56px 0 16px;font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-1px;line-height:1.15}
+main p,main li{font-size:18px;line-height:1.75;color:#2e2848}
+main p{margin:0 0 20px}
+main ul{padding-left:22px;margin:0 0 20px}
+main li{margin-bottom:8px}
+strong{color:var(--ink)}
+.num{display:block;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--fuchsia-d);margin-top:64px}
+.num + h2{margin-top:8px}
+.quote{margin:32px 0;padding:24px 28px;border-left:4px solid var(--fuchsia);background:var(--soft);border-radius:0 16px 16px 0;font-size:21px;line-height:1.5;font-weight:600;color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px;margin:28px 0 32px}
+.card{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}
+.card b{display:block;font-size:17px;margin-bottom:6px}
+.card span{display:block;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--violet-d);margin-bottom:10px}
+.card p{font-size:15px;line-height:1.55;margin:0;color:var(--muted)}
+figure{margin:32px 0 36px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{margin-top:12px;font-size:14px;color:var(--muted);text-align:center}
+.steps{list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:52px;margin-bottom:18px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;background:var(--violet);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.note{font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:48px}
+.cta{background:var(--night);color:#fff;border-radius:28px;padding:clamp(28px,5vw,48px);margin-top:56px}
+.cta h2{color:#fff;margin:0 0 12px}
+.cta p{color:#c9c3e3}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
+.btn.primary{background:var(--fuchsia);color:#fff}
+.btn.ghost{border:1px solid #4a4180;color:#fff}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:28px;padding-bottom:28px;background:#0d0a20;color:#a39cc4;font-size:14px}
+footer a{color:#c9c3e3}
+</style>
+</head>
+<body>
+
+<header class="pad">
+<nav>
+<a class="brand" href="/"><span class="dot"></span>Oscar Trías</a>
+<div class="navlinks">
+<a href="/#casos">Casos</a>
+<a href="/blog/">Blog</a>
+<a href="/#contacto">Contacto</a>
+</div>
+</nav>
+<div class="hero">
+<p class="eyebrow">Blog · Proyecto personal</p>
+<h1>Lo que aprendí construyendo <em>La Botanería</em></h1>
+<p class="lede">Todos los días diseño productos financieros. Esta vez apliqué el mismo proceso a algo mío: un candy wall para fiestas. Resulta que el problema nunca fueron los dulces.</p>
+<p class="meta">7 de octubre de 2026 · 7 min de lectura</p>
+</div>
+</header>
+
+<main class="pad">
+
+<p><a href="https://labotaneria.mx/">La Botanería</a> monta muros de botanas dulces y saladas para celebraciones en la Ciudad de México. Ya lleva más de 50 eventos. El producto funciona: la gente se toma fotos, come y repite.</p>
+
+<p>Pero cuando lo vi con ojos de Product Manager, la pregunta dejó de ser "¿cómo vendo más?" y se volvió "¿dónde se rompe el viaje del cliente?". Esto es lo que encontré, en el orden en que lo hice.</p>
+
+<span class="num">01 · INVESTIGAR</span>
+<h2>El problema no era el producto, era la cotización</h2>
+
+<p>Antes de tocar el sitio, leí solicitudes reales de personas que buscaban una mesa de dulces en la ciudad. Las preguntas se repetían una y otra vez:</p>
+
+<ul>
+<li>¿Cuánto cuesta?</li>
+<li>¿Qué incluye?</li>
+<li>¿Cuánto toca por persona?</li>
+<li>¿Cabe en mi terraza?</li>
+</ul>
+
+<p>Ninguna de esas respuestas estaba en el sitio. Para saber el precio había que escribir y esperar. El líder del mercado, en cambio, publica sus precios y promete responder en menos de dos horas.</p>
+
+<p class="quote">El viaje del cliente no se caía en el evento. Se caía antes de que el cliente viera el producto.</p>
+
+<span class="num">02 · ENTENDER A QUIÉN LE VENDO</span>
+<h2>Tres clientes, tres trabajos distintos</h2>
+
+<p>El mismo muro de botanas resuelve cosas muy diferentes según quién lo compra. Armé tres proto-personas para no diseñar para "todo el mundo":</p>
+
+<div class="cards">
+<div class="card"><span>Celebraciones</span><b>La anfitriona</b><p>Quiere que su fiesta se vea increíble y no tener que servir a nadie.</p></div>
+<div class="card"><span>Bodas</span><b>La pareja</b><p>Quiere que todo combine, con un presupuesto que fijó desde el inicio.</p></div>
+<div class="card"><span>Empresas</span><b>La coordinadora de RH</b><p>Quiere celebrar al equipo con un proveedor que facture y no falle.</p></div>
+</div>
+
+<p>El insight que más me sorprendió: casi nadie pide solo dulces. Las solicitudes mezclan gomitas con chicharrones, papitas y fruta enchilada. El nombre "La Botanería" ya hablaba ese idioma; el sitio no. Hoy el mensaje es <strong>dulce, salado y listo para la foto</strong>.</p>
+
+<span class="num">03 · DESCUBRIR ANTES DE CONSTRUIR</span>
+<h2>Probar barato antes de programar</h2>
+
+<p>La solución obvia era un cotizador en línea. Pero construirlo antes de saber si alguien lo usaría es exactamente el error que intento evitar en el trabajo. Así que separé lo que creía de lo que sabía.</p>
+
+<p>El supuesto más riesgoso era este: <strong>publicar el precio sube las cotizaciones sin atraer solo a quien busca lo más barato</strong>. Para probarlo diseñé experimentos que cuestan poco:</p>
+
+<ol class="steps">
+<li><strong>Medir primero.</strong> Una semana de línea base: visitas, conversaciones y tiempo de respuesta. Sin eso no hay forma de saber si algo mejoró.</li>
+<li><strong>Una página con precio y otra sin precio</strong>, con el mismo anuncio y la misma audiencia.</li>
+<li><strong>Un botón "Calcula tu precio"</strong> que abre un formulario corto, y una persona responde por WhatsApp. Si nadie le da clic, no hay nada que automatizar.</li>
+</ol>
+
+<p>Cada experimento tiene una fecha y una decisión escrita de antemano: qué hago si pasa y qué hago si falla. Ninguno termina en "aprendimos algo".</p>
+
+<span class="num">04 · DEFINIR LO MÍNIMO</span>
+<h2>Un cotizador en cuatro preguntas</h2>
+
+<p>Con el problema claro, escribí el PRD y las job stories. El flujo cabe en una línea:</p>
+
+<figure>
+<svg viewBox="0 0 760 170" role="img" aria-label="Flujo del cotizador: cuatro preguntas, un rango de precio y WhatsApp con el evento ya descrito">
+<g font-family="Plus Jakarta Sans, system-ui, sans-serif">
+<rect x="0" y="35" width="210" height="100" rx="20" fill="#f5f3fc" stroke="#e4e0f2"/>
+<text x="105" y="78" text-anchor="middle" font-size="17" font-weight="700" fill="#1c1733">4 preguntas</text>
+<text x="105" y="104" text-anchor="middle" font-size="13" fill="#5b5670">evento · invitados</text>
+<text x="105" y="121" text-anchor="middle" font-size="13" fill="#5b5670">servicios · fecha</text>
+<path d="M222 85h50" stroke="#694ed6" stroke-width="3" stroke-linecap="round"/><path d="M266 76l10 9-10 9" fill="none" stroke="#694ed6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="285" y="35" width="210" height="100" rx="20" fill="#694ed6"/>
+<text x="390" y="78" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Rango de precio</text>
+<text x="390" y="104" text-anchor="middle" font-size="13" fill="#e4e0f2">y paquete</text>
+<text x="390" y="121" text-anchor="middle" font-size="13" fill="#e4e0f2">recomendado</text>
+<path d="M507 85h50" stroke="#c137a2" stroke-width="3" stroke-linecap="round"/><path d="M551 76l10 9-10 9" fill="none" stroke="#c137a2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="570" y="35" width="190" height="100" rx="20" fill="#c137a2"/>
+<text x="665" y="78" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">WhatsApp</text>
+<text x="665" y="104" text-anchor="middle" font-size="13" fill="#f6dff0">con el evento</text>
+<text x="665" y="121" text-anchor="middle" font-size="13" fill="#f6dff0">ya descrito</text>
+</g>
+</svg>
+<figcaption>Menos de un minuto, sin escribir desde cero.</figcaption>
+</figure>
+
+<p>Dos decisiones de producto que me importan más que el flujo:</p>
+
+<ul>
+<li><strong>Por fases.</strong> Primero precios visibles y un cotizador atendido por una persona. El automático solo se construye si el experimento demuestra que la gente lo usa.</li>
+<li><strong>Métricas de protección.</strong> No basta con que suban las conversaciones. Si baja el cierre o el ticket, el precio visible está atrayendo al cliente equivocado, y eso también se mide.</li>
+</ul>
+
+<p>La venta se sigue cerrando en WhatsApp. El cotizador no lo reemplaza: le quita al cliente la parte incómoda de preguntar sin saber si le alcanza.</p>
+
+<span class="num">05 · LO QUE NO SE VE</span>
+<h2>Un sitio que nadie puede leer no vende</h2>
+
+<p>La lección más técnica llegó en la auditoría. El sitio se veía bien en el navegador, pero para Google y para los asistentes de IA solo existía una pantalla de carga. El contenido se armaba con JavaScript y los buscadores no lo esperaban.</p>
+
+<p>Cada vez más gente pregunta a una IA "¿quién hace candy walls en CDMX?". Si tu sitio no se puede leer, no existes en esa respuesta. Publicar HTML legible, preguntas frecuentes y datos estructurados pasó a ser la primera tarea, antes que cualquier anuncio.</p>
+
+<span class="num">06 · SALIR AL MERCADO</span>
+<h2>Un segmento a la vez</h2>
+
+<p>Con tres clientes posibles, la tentación es hablarle a todos. El plan de 90 días hace lo contrario:</p>
+
+<div class="cards">
+<div class="card"><span>Entrar</span><b>Celebraciones</b><p>Deciden rápido y compran por lo que ven en Instagram.</p></div>
+<div class="card"><span>Temporada</span><b>Posadas de empresa</b><p>Logo en LED, opción saludable y factura.</p></div>
+<div class="card"><span>Sembrar</span><b>Bodas 2027</b><p>Alianzas con wedding planners y venues.</p></div>
+</div>
+
+<p>Y una sola estrella polar: <strong>eventos confirmados con anticipo por mes</strong>. No seguidores, no visitas. Lo que paga el negocio.</p>
+
+<h2>Lo que me llevo</h2>
+
+<ul>
+<li><strong>El cuello de botella casi nunca está donde crees.</strong> Aquí no era el producto, era la cotización.</li>
+<li><strong>Primero se mide, después se cambia.</strong> Sin línea base, cualquier mejora es una opinión.</li>
+<li><strong>Construir menos es una decisión de producto.</strong> Un formulario atendido por una persona valida lo mismo que un cotizador completo, por una fracción del costo.</li>
+<li><strong>Cada experimento necesita su decisión escrita antes de empezar.</strong></li>
+<li><strong>El proceso es el mismo en un banco y en un negocio de fiestas.</strong> Cambian el tamaño y el riesgo, no la forma de pensar.</li>
+</ul>
+
+<p class="note">Los experimentos están corriendo en este momento. Cuando tenga resultados, los publicaré aquí, incluyendo lo que no funcionó. Mientras tanto, puedes ver La Botanería en <a href="https://labotaneria.mx/">labotaneria.mx</a> y en <a href="https://instagram.com/botaneria.mx">Instagram</a>.</p>
+
+<section class="cta">
+<h2>¿Tu producto tiene un cuello de botella que no encuentras?</h2>
+<p>Hago este proceso, de la investigación al lanzamiento, para equipos y negocios que quieren crecer con datos y no con suposiciones.</p>
+<div class="btns">
+<a class="btn primary" href="mailto:otriasm@gmail.com?subject=Proyecto">Platiquemos de tu proyecto</a>
+<a class="btn ghost" href="/blog/">Más artículos</a>
+</div>
+</section>
+
+</main>
+
+<footer class="pad">
+<span>© 2026 Oscar Trías</span>
+<span>Ciudad de México · <a href="https://medium.com/@oscar_trias">Medium</a> · <a href="https://linkedin.com/in/oscartriasm">LinkedIn</a></span>
+</footer>
+
+</body>
+</html>

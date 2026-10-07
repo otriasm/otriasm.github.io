@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog | Oscar Trías</title>
+<meta name="description" content="Notas de producto de Oscar Trías: lo que aprendo construyendo productos, en banca y en proyectos propios.">
+<link rel="canonical" href="https://otriasm.github.io/blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+:root{--ink:#1c1733;--muted:#5b5670;--night:#140f2e;--violet:#694ed6;--violet-d:#4b36a8;--fuchsia:#c137a2;--fuchsia-d:#a12a86;--soft:#f5f3fc;--line:#e4e0f2}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+a:focus-visible{outline:3px solid var(--fuchsia);outline-offset:3px}
+.pad{padding-left:clamp(20px,5vw,64px);padding-right:clamp(20px,5vw,64px)}
+header{background:var(--night);color:#fff;padding-top:28px;padding-bottom:clamp(56px,8vw,96px)}
+nav{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;font-size:22px;font-weight:800;letter-spacing:-.5px;text-decoration:none}
+.dot{display:inline-block;width:14px;height:14px;border-radius:50%;background:var(--fuchsia);box-shadow:8px 0 0 var(--violet);margin-right:8px}
+.navlinks{display:flex;flex-wrap:wrap;gap:4px 28px}
+.navlinks a{color:#e4e0f2;font-size:15px;font-weight:500;text-decoration:none;padding:12px 0}
+.hero{max-width:820px;margin-top:clamp(48px,7vw,88px)}
+.eyebrow{margin:0 0 16px;font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#e9a6da}
+h1{margin:0;font-size:clamp(36px,5.4vw,64px);font-weight:800;letter-spacing:-2px;line-height:1.05}
+h1 em{font-style:normal;color:#e9a6da}
+.lede{margin:24px 0 0;font-size:clamp(18px,2vw,21px);line-height:1.6;color:#c9c3e3;max-width:680px}
+.meta{margin-top:28px;font-size:14px;color:#a39cc4}
+main{max-width:760px;margin:0 auto;padding-top:clamp(48px,7vw,80px);padding-bottom:clamp(48px,7vw,80px)}
+main h2{margin:56px 0 16px;font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-1px;line-height:1.15}
+main p,main li{font-size:18px;line-height:1.75;color:#2e2848}
+main p{margin:0 0 20px}
+main ul{padding-left:22px;margin:0 0 20px}
+main li{margin-bottom:8px}
+strong{color:var(--ink)}
+.num{display:block;font-size:13px;font-weight:700;letter-spacing:2px;color:var(--fuchsia-d);margin-top:64px}
+.num + h2{margin-top:8px}
+.quote{margin:32px 0;padding:24px 28px;border-left:4px solid var(--fuchsia);background:var(--soft);border-radius:0 16px 16px 0;font-size:21px;line-height:1.5;font-weight:600;color:var(--ink)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:16px;margin:28px 0 32px}
+.card{border:1px solid var(--line);border-radius:20px;padding:22px;background:#fff}
+.card b{display:block;font-size:17px;margin-bottom:6px}
+.card span{display:block;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--violet-d);margin-bottom:10px}
+.card p{font-size:15px;line-height:1.55;margin:0;color:var(--muted)}
+figure{margin:32px 0 36px}
+figure svg{width:100%;height:auto;display:block}
+figcaption{margin-top:12px;font-size:14px;color:var(--muted);text-align:center}
+.steps{list-style:none;padding:0;counter-reset:s}
+.steps li{counter-increment:s;position:relative;padding-left:52px;margin-bottom:18px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;background:var(--violet);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.note{font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:48px}
+.cta{background:var(--night);color:#fff;border-radius:28px;padding:clamp(28px,5vw,48px);margin-top:56px}
+.cta h2{color:#fff;margin:0 0 12px}
+.cta p{color:#c9c3e3}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:700;text-decoration:none}
+.btn.primary{background:var(--fuchsia);color:#fff}
+.btn.ghost{border:1px solid #4a4180;color:#fff}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:28px;padding-bottom:28px;background:#0d0a20;color:#a39cc4;font-size:14px}
+footer a{color:#c9c3e3}
+</style>
+<style>
+.list{max-width:900px;margin:0 auto;padding-top:clamp(48px,7vw,80px);padding-bottom:clamp(64px,8vw,104px)}
+.post{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));overflow:hidden;border:1px solid var(--line);border-radius:24px;color:inherit;text-decoration:none;background:#fff}
+.post .art{min-height:220px;background:var(--fuchsia-d);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.post .tag{align-self:flex-start;padding:6px 12px;border-radius:999px;background:#7e1f69;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.post .big{font-size:44px;font-weight:800;letter-spacing:-1.5px;line-height:1}
+.post .body{padding:28px;display:flex;flex-direction:column;gap:12px}
+.post h2{margin:0;font-size:24px;font-weight:700;line-height:1.3;letter-spacing:-.5px}
+.post p{margin:0;font-size:16px;line-height:1.6;color:var(--muted)}
+.post .more{margin-top:auto;font-weight:700;color:var(--violet-d)}
+</style>
+</head>
+<body>
+<header class="pad">
+<nav>
+<a class="brand" href="/"><span class="dot"></span>Oscar Trías</a>
+<div class="navlinks">
+<a href="/#casos">Casos</a>
+<a href="/blog/">Blog</a>
+<a href="/#contacto">Contacto</a>
+</div>
+</nav>
+<div class="hero">
+<p class="eyebrow">Blog</p>
+<h1>Notas de <em>producto</em></h1>
+<p class="lede">Lo que aprendo construyendo productos: en banca, en proyectos propios y en todo lo que hay entre la idea y el lanzamiento.</p>
+</div>
+</header>
+<main class="list pad">
+<a class="post" href="/blog/la-botaneria/">
+<div class="art"><span class="tag">Proyecto personal</span><span class="big">La Botanería</span></div>
+<div class="body">
+<span style="font-size:14px;font-weight:700;color:var(--muted)">7 de octubre de 2026 · 7 min</span>
+<h2>Lo que aprendí construyendo La Botanería</h2>
+<p>El mismo proceso de producto que uso en banca, aplicado a un candy wall para fiestas. El problema nunca fueron los dulces.</p>
+<span class="more">Leer artículo →</span>
+</div>
+</a>
+</main>
+<footer class="pad">
+<span>© 2026 Oscar Trías</span>
+<span>Ciudad de México · <a href="https://medium.com/@oscar_trias">Medium</a> · <a href="https://linkedin.com/in/oscartriasm">LinkedIn</a></span>
+</footer>
+</body>
+</html>
