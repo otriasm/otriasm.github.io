@@ -9,6 +9,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Lo que aprendí construyendo La Botanería">
 <meta property="og:description" content="El mismo proceso de producto que uso en banca, aplicado a un candy wall para fiestas.">
+<meta property="og:image" content="https://otriasm.github.io/blog/la-botaneria/img/portada-escritorio.webp">
 <meta property="og:url" content="https://otriasm.github.io/blog/la-botaneria/">
 <meta property="article:published_time" content="2026-10-07">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,6 +57,15 @@ figcaption{margin-top:12px;font-size:14px;color:var(--muted);text-align:center}
 .steps{list-style:none;padding:0;counter-reset:s}
 .steps li{counter-increment:s;position:relative;padding-left:52px;margin-bottom:18px}
 .steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;background:var(--violet);color:#fff;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.shot{margin:32px 0 36px}
+.shot img{display:block;width:100%;height:auto;border-radius:20px;border:1px solid var(--line);background:var(--soft)}
+.shot.wide{margin-left:auto;margin-right:auto}
+.shot.narrow img{max-width:360px;margin:0 auto}
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:560px;margin:0 auto}
+.pair img{border:0;background:none;border-radius:0}
+.cover{max-width:1100px;margin:clamp(-40px,-4vw,-24px) auto 0;position:relative}
+.cover img{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 24px 60px rgba(20,15,46,.25)}
+.shot figcaption,.cover figcaption{margin-top:12px;font-size:14px;color:var(--muted);text-align:center}
 .note{font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px;margin-top:48px}
 .cta{background:var(--night);color:#fff;border-radius:28px;padding:clamp(28px,5vw,48px);margin-top:56px}
 .cta h2{color:#fff;margin:0 0 12px}
@@ -87,6 +97,11 @@ footer a{color:#c9c3e3}
 </div>
 </header>
 
+<figure class="cover pad">
+<img src="img/portada-escritorio.webp" width="1600" height="776" alt="Portada de labotaneria.mx: titular 'La botana más rica de tu fiesta', botones Celebración, Boda y Empresa, y fotos de montajes reales">
+<figcaption>labotaneria.mx hoy: una puerta de entrada por tipo de evento.</figcaption>
+</figure>
+
 <main class="pad">
 
 <p><a href="https://labotaneria.mx/">La Botanería</a> monta muros de botanas dulces y saladas para celebraciones en la Ciudad de México. Ya lleva más de 50 eventos. El producto funciona: la gente se toma fotos, come y repite.</p>
@@ -105,9 +120,16 @@ footer a{color:#c9c3e3}
 <li>¿Cabe en mi terraza?</li>
 </ul>
 
-<p>Ninguna de esas respuestas estaba en el sitio. Para saber el precio había que escribir y esperar. El líder del mercado, en cambio, publica sus precios y promete responder en menos de dos horas.</p>
+<p>Ninguna de esas respuestas estaba en el sitio original. Para saber el precio había que escribir y esperar. El líder del mercado, en cambio, publica sus precios y promete responder en menos de dos horas.</p>
 
 <p class="quote">El viaje del cliente no se caía en el evento. Se caía antes de que el cliente viera el producto.</p>
+
+<p>Hoy cada paquete responde esas cuatro preguntas sin que nadie tenga que escribir:</p>
+
+<figure class="shot">
+<img src="img/paquete-sweet-station.webp" width="1300" height="611" loading="lazy" alt="Tarjeta del paquete Sweet Station: hasta 100 invitados, 3 horas con staff, qué incluye y precio desde $17,900">
+<figcaption>Precio "desde", invitados, horas y qué incluye, en la misma tarjeta.</figcaption>
+</figure>
 
 <span class="num">02 · ENTENDER A QUIÉN LE VENDO</span>
 <h2>Tres clientes, tres trabajos distintos</h2>
@@ -121,6 +143,14 @@ footer a{color:#c9c3e3}
 </div>
 
 <p>El insight que más me sorprendió: casi nadie pide solo dulces. Las solicitudes mezclan gomitas con chicharrones, papitas y fruta enchilada. El nombre "La Botanería" ya hablaba ese idioma; el sitio no. Hoy el mensaje es <strong>dulce, salado y listo para la foto</strong>.</p>
+
+<figure class="shot">
+<div class="pair">
+<img src="img/movil-portada.webp" width="480" height="989" loading="lazy" alt="Portada móvil de La Botanería con el texto 'Botana, dulces y decoración para tu evento en CDMX'">
+<img src="img/movil-paquete.webp" width="480" height="989" loading="lazy" alt="Paquete Wall of Sweet Love en móvil: muro de dulces y botana con letrero neón, desde $9,500">
+</div>
+<figcaption>Diseñado primero para celular, porque la mayoría llega desde Instagram.</figcaption>
+</figure>
 
 <span class="num">03 · DESCUBRIR ANTES DE CONSTRUIR</span>
 <h2>Probar barato antes de programar</h2>
@@ -164,6 +194,13 @@ footer a{color:#c9c3e3}
 <figcaption>Menos de un minuto, sin escribir desde cero.</figcaption>
 </figure>
 
+<p>Así se ve el segundo paso en el sitio:</p>
+
+<figure class="shot narrow">
+<img src="img/cotizador-paso-2.webp" width="638" height="963" loading="lazy" alt="Cotizador de La Botanería, paso 2 de 4: elegir número de invitados y paquete, con lo que incluye y un enlace a las medidas del montaje">
+<figcaption>Paso 2 de 4: invitados, paquete y medidas del montaje a un toque.</figcaption>
+</figure>
+
 <p>Dos decisiones de producto que me importan más que el flujo:</p>
 
 <ul>
@@ -172,6 +209,11 @@ footer a{color:#c9c3e3}
 </ul>
 
 <p>La venta se sigue cerrando en WhatsApp. El cotizador no lo reemplaza: le quita al cliente la parte incómoda de preguntar sin saber si le alcanza.</p>
+
+<figure class="shot narrow">
+<img src="img/movil-cotizar.webp" width="480" height="989" loading="lazy" alt="Cierre de la página móvil: '¿Cuánto costaría tu fiesta? Cuatro preguntas y listo', con botones Cotizar mi evento y Escribir por WhatsApp">
+<figcaption>Dos caminos al final: cotizar o escribir directo.</figcaption>
+</figure>
 
 <span class="num">05 · LO QUE NO SE VE</span>
 <h2>Un sitio que nadie puede leer no vende</h2>
